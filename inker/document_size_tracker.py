@@ -1,8 +1,6 @@
 from abc import ABC
 from typing import TYPE_CHECKING
 
-from pygameextra import settings
-
 if TYPE_CHECKING:
     from rm_api import Document
 from rm_api.defaults import RM_SCREEN_SIZE, FileTypes
@@ -110,9 +108,6 @@ class DocumentSizeTracker(ABC):
             'template_transform_y': RM_SCREEN_SIZE[0] if self._reverse_frame_size else 0,
             'template_transform_x': RM_SCREEN_SIZE[1] - RM_SCREEN_SIZE[0] if self._reverse_frame_size else 0
         }
-
-        if settings.config.debug_disable_lines_alignment:
-            final['x_shift'] = 0
 
         return final
 
