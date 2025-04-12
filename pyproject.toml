@@ -1,0 +1,22 @@
+[project]
+name = "rm-lines"
+version = "1.0.0"
+description = "A python library that combines rmscene/rmc and librm_lines to read and render rM Line files"
+authors = [
+    {name = "RedTTG",email = "red@redttg.com"}
+]
+license = {text = "Mixed"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "colorama (>=0.4.6,<0.5.0)"
+]
+
+[tool.poetry]
+
+[tool.poetry.group.dev.dependencies]
+colorama = ">=0.4.6,<0.5.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
