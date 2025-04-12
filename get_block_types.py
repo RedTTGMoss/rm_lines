@@ -1,4 +1,4 @@
-import rmscene
+from rm_lines import rmscene
 
 
 def get_types(block_class):
