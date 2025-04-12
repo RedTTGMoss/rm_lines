@@ -1,6 +1,6 @@
 [project]
 name = "rm-lines"
-version = "1.0.0"
+version = "0.0.0+replaced-by-ci"
 description = "A python library that combines rmscene/rmc and librm_lines to read and render rM Line files"
 authors = [
     {name = "RedTTG",email = "red@redttg.com"}
