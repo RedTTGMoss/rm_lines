@@ -58,7 +58,7 @@ class SvgWriter:
         self._output.write(text)
 
     def format(self, **kwargs):
-        return self._output.getvalue().format(**kwargs)
+        return SVG_HEADER.format(**kwargs) + self._output.getvalue()
 
 
 def read_template_svg(template_path: Path) -> str:
@@ -77,10 +77,6 @@ def tree_to_svg(tree: SceneTree, output_file, track_xy: DocumentSizeTracker, tem
         track_xy.frame_width, track_xy.frame_height = tree.scene_info.paper_size
     output = SvgWriter()
     priority_lines = io.StringIO()  # For lines that should be drawn first AKA Highlighter
-
-    # add svg header
-    # output.write('<svg xmlns="http://www.w3.org/2000/svg">\n')
-    output.write(SVG_HEADER)
 
     output.write(
         '    <g id="template" transform="translate({template_transform_x}, {template_transform_y})">\n'
